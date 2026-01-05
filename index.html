@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- ===== META ===== -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ===== TITLE & FAVICON ===== -->
+  <title>MovieMania</title>
+  <link rel="icon" type="image/png" href="logo.png" />
+
+  <!-- ===== ICONS (Font Awesome) ===== -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+
+  <!-- ===== MAIN STYLESHEET ===== -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ===== BACKGROUND VIDEO ===== -->
+  <video class="bg-video" autoplay muted loop playsinline>
+    <source src="Bg video.mp4" type="video/mp4" />
+  </video>
+  <div class="bg-overlay"></div>
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar">
+    <div class="logo">
+      <img src="logo.png" alt="MovieMania Logo" class="logo-img" />
+      <span class="logo-text">MovieMania</span>
+    </div>
+
+    <!-- Navigation Links -->
+    <nav class="nav-links" id="navLinks">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+
+      <!-- Dark Mode Toggle (Mobile Only) -->
+      <button
+        id="themeToggleMobile"
+        class="nav-item mobile-toggle"
+        aria-label="Toggle dark mode"
+      >
+        <i class="fas fa-moon"></i>
+        <span>Dark Mode</span>
+      </button>
+    </nav>
+
+    <!-- Navbar Actions -->
+    <div class="nav-actions">
+      <!-- Dark Mode Toggle (Desktop Only) -->
+      <button
+        id="themeToggle"
+        class="theme-toggle desktop-toggle"
+        aria-label="Toggle dark mode"
+      >
+        <i class="fas fa-moon toggle-icon"></i>
+      </button>
+
+      <!-- Hamburger Menu -->
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>Find Movies Instantly</h1>
+      <p>Search • Explore • Learn</p>
+
+      <!-- Search Box -->
+      <div class="search-box">
+        <input
+          id="searchInput"
+          type="text"
+          placeholder="Search movie title..."
+          autocomplete="off"
+        />
+        <button id="searchBtn">Search</button>
+      </div>
+
+      <!-- Movie Results -->
+      <div id="moviesGrid" class="movies-grid"></div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT SECTION ===== -->
+  <section id="about" class="section">
+    <div class="card about-card">
+      <h2>About MovieMania</h2>
+
+      <p>
+        <strong>MovieMania</strong> is a modern, visually immersive movie
+        discovery platform built for movie lovers who want fast access to rich
+        and accurate information. Powered by the <strong>OMDb API</strong>, it
+        brings thousands of movies to your fingertips.
+      </p>
+
+      <p>
+        Our goal is to make discovering movies <em>easy, engaging, and
+        beautiful</em>. From classic films to the latest releases, MovieMania
+        presents everything in a clean, cinematic interface inspired by modern
+        streaming platforms.
+      </p>
+
+      <p>
+        Built using modern web technologies, the platform focuses on
+        performance, responsiveness, and smooth user interactions — enhanced
+        with animations, hover effects, and seamless transitions.
+      </p>
+
+      <!-- Feature Highlights -->
+      <div class="about-features">
+        <div>🎬 <strong>Instant Movie Search</strong><br />Real-time OMDb results</div>
+        <div>📊 <strong>Complete Details</strong><br />Cast, ratings & plot</div>
+        <div>✨ <strong>Cinematic UI</strong><br />Modern glassmorphism design</div>
+        <div>🌙 <strong>Light & Dark Mode</strong><br />Smooth theme switching</div>
+        <div>📱 <strong>Fully Responsive</strong><br />Mobile & desktop friendly</div>
+        <div>⚡ <strong>Fast & Lightweight</strong><br />Pure HTML, CSS & JS</div>
+      </div>
+
+      <p style="margin-top: 28px;">
+        MovieMania is more than a project — it’s a showcase of clean design,
+        thoughtful UX, and real-world API integration using
+        <strong>HTML, CSS, and JavaScript</strong>.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT SECTION ===== -->
+  <section id="contact" class="section">
+    <div class="card">
+      <div class="card-content">
+        <h2>Contact Us</h2>
+
+        <form action="https://formspree.io/f/mzdzonjn" method="POST">
+          <div class="input-group">
+            <i class="fas fa-user"></i>
+            <input type="text" name="name" placeholder="Your Name" required />
+          </div>
+
+          <div class="input-group">
+            <i class="fas fa-envelope"></i>
+            <input type="email" name="email" placeholder="Your Email" required />
+          </div>
+
+          <div class="input-group textarea-group">
+            <i class="fas fa-comment-dots"></i>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+          </div>
+
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-content">
+      <p class="footer-text">© 2026 MovieMania • Built by Moses Jairaj</p>
+
+      <div class="footer-socials">
+        <a
+          href="https://github.com/MosesJairaj-17"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="GitHub"
+        >
+          <i class="fab fa-github"></i>
+        </a>
+
+        <a
+          href="https://www.linkedin.com/in/moses-jairaj-b6154a320"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn"
+        >
+          <i class="fab fa-linkedin"></i>
+        </a>
+
+        <a
+          href="mailto:mosesjairaj2005@gmail.com"
+          aria-label="Email"
+        >
+          <i class="fas fa-envelope"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== MAIN SCRIPT ===== -->
+  <script src="script.js"></script>
+
+</body>
+</html>
